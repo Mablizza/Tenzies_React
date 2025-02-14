@@ -17,11 +17,15 @@ export default function App() {
   }
 
   function rollDice() {
-      setDice(generateAllNewDice())
-  }
+    setDice(oldDice => oldDice.map(die => 
+        die.isHeld ?
+            die :
+            { ...die, value: Math.ceil(Math.random() * 6) }
+    ))
+}
 
   function hold(id) {
-    console.log(id)
+    // console.log(id)
     setDice(prevDice => prevDice.map( (die) => {
       return die.id == id ? { ...die, isHeld: !die.isHeld } : { ...die }
     }))
