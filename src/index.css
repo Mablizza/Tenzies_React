@@ -18,7 +18,7 @@ main{
   flex-direction: column;
 }
 
-.die-grid{
+.dice-container{
   padding: 2rem;
   /* border: 1px solid #0B2434; */
   display: grid;
@@ -43,7 +43,7 @@ button{
   font-family: Karla, sans-serif;
 }
 
-.rollBtn{
+.roll-dice{
   display: block;
   background-color: #5035FF;
   color: white;
@@ -51,4 +51,9 @@ button{
   max-width: 10rem;
   font-size: 2.5rem;
   margin-top: 5rem;
+}
+
+button.held{
+  background-color: #59E391;
+  border: #0B2434 solid 3px;
 }
