@@ -1,59 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #0B2434;
   font-family: Karla, sans-serif;
-}
-
-#root{
-  padding: 30px 30px;
-}
-
-main{
-  background-color: #F5F5F5;
-  border: solid whitesmoke 5px;
-  border-radius: 15px;
-  min-height: 50rem;
+  margin: 0;
+  background-color: #0B2434;
+  padding: 20px;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+div#root {
+  height: 100%;
+  width: 100%;
+  max-height: 400px;
+  max-width: 400px;
+}
+
+main {
+  background-color: #F5F5F5;
+  height: 100%;
+  border-radius: 5px;
+  display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.dice-container{
-  padding: 2rem;
-  /* border: 1px solid #0B2434; */
+.dice-container {
   display: grid;
-  /* grid: repeat(2, 5rem) / auto-flow 7rem; */
   grid-template: auto auto / repeat(5, 1fr);
-  gap: 2rem;
-  justify-content: center;
+  gap: 20px;
 }
 
-button{
-  border-radius: 10px;
-  min-height: 5rem;
-  max-height: 5rem;
-  min-width: 5rem;
-  max-width: 5rem;
-  border: none;
-  background-color: #FFFFFF;
-  box-shadow: -1px 2px 8px rgb(140, 140, 140);
-  /* box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15); */
-  font-size: 3.5rem;
-  cursor: pointer;
+button {
   font-family: Karla, sans-serif;
+  cursor: pointer;
 }
 
-.roll-dice{
-  display: block;
+.dice-container button {
+  height: 50px;
+  width: 50px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  border: none;
+  background-color: white;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+button.roll-dice {
+  height: 50px;
+  width: 100px;
+  border: none;
+  border-radius: 6px;
   background-color: #5035FF;
   color: white;
-  min-width: 10rem;
-  max-width: 10rem;
-  font-size: 2.5rem;
-  margin-top: 5rem;
-}
-
-button.held{
-  background-color: #59E391;
-  border: #0B2434 solid 3px;
+  font-size: 1.2rem;
 }

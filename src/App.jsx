@@ -19,8 +19,19 @@ export default function App() {
     function rollDice() {
         setDice(generateAllNewDice())
     }
+    function hold(id) {
+      console.log(id)
+  }
 
-    const diceElements = dice.map(dieObj => <Die key={dieObj.id} className={dieObj.isHeld ? "held" : null } value={dieObj.value} />)
+  const diceElements = dice.map(dieObj => (
+      <Die
+          key={dieObj.id}
+          value={dieObj.value}
+          isHeld={dieObj.isHeld}
+          hold={hold}
+          id={dieObj.id}
+      />
+  ))
 
     return (
         <main>
